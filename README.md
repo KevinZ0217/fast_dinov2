@@ -6,6 +6,7 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
 ### Dataset download
 1.Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
 2. Download the Imagenet-1k dataset with the following directory structure:
+```shell
 imagenet/
 ├── train/
 │   ├── n01440764/
@@ -15,7 +16,7 @@ imagenet/
     ├── n01440764/
     ├── n01443537/
     └── ...
-
+```
 
 
 ### Imagenet-100 Experiments:
