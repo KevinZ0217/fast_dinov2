@@ -3,7 +3,7 @@
 ## Environmental setup
 Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all required packages and environments.
 
-### Dataset download
+### Dataset Preparation
 1. Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
 
 2. Download the Imagenet-1k dataset with the following directory structure:
@@ -19,6 +19,7 @@ imagenet/
     └── ...
 ```
 
+3. Metadata generation: in ```shell process_metadata.py```, replace ```shell root``` with the path to the mini-imagenet and imagenet. Run ```shell python process_metadata.py```.
 
 ### Imagenet-100 Experiments:
 1. Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
