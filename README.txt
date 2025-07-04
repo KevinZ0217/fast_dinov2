@@ -1,3 +1,5 @@
+# FastDINOv2: Frequency Based Curriculum Learning Improves Robustness and Training Speed
+
 ## Environmental setup
 Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all required packages and environments.
 
