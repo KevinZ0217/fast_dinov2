@@ -3,9 +3,22 @@
 ## Environmental setup
 Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all required packages and environments.
 
+###Dataset download
+1Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
 
 
-
+###Imagenet-100 Experiments:
+1. Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
+2. Download the Imagenet-1k dataset with the following directory structure:
+imagenet/
+├── train/
+│   ├── n01440764/
+│   ├── n01443537/
+│   └── ...
+└── val/
+    ├── n01440764/
+    ├── n01443537/
+    └── ...
 
 
 1. In train.sh, change --config-file to dinov2/configs/ssl_112_config.yaml --output-dir path to your own output folder(e.g. /users/username/scratch/robust_dinov2_output/ssl_112_output), "root" path and "extra" path in train.dataset_path=Imagenet to your own dataset path.
