@@ -1,5 +1,5 @@
 MODEL:
-  WEIGHTS: 'output_gauss100-200-denoised/model_0124999.rank_0.pth'
+  WEIGHTS: ''
 compute_precision:
   grad_scaler: true
   teacher:
@@ -59,7 +59,7 @@ ibot:
   head_nlayers: 3
   head_hidden_dim: 2048
 train:
-  batch_size_per_gpu: 40
+  batch_size_per_gpu: 128
   dataset_path: ImageNet:split=TRAIN
   output_dir: .
   saveckp_freq: 20
@@ -69,7 +69,7 @@ train:
   cache_dataset: true
   centering: "centering" # or "sinkhorn_knopp"
 student:
-  arch: vit_small
+  arch: vit_base
   patch_size: 16
   drop_path_rate: 0
   layerscale: 1.0e-05
@@ -90,7 +90,7 @@ teacher:
   teacher_temp: 0.07
   warmup_teacher_temp_epochs: 30
 optim:
-  epochs: 100
+  epochs: 200
   weight_decay: 0.04
   weight_decay_end: 0.4
   base_lr: 0.004  # learning rate for a batch size of 1024
@@ -112,7 +112,7 @@ crops:
   local_crops_scale:
   - 0.05
   - 0.32
-  global_crops_size: 224
-  local_crops_size: 96
+  global_crops_size: 112
+  local_crops_size: 48
 evaluation:
   eval_period_iterations: 6250
