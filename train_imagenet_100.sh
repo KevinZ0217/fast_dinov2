@@ -8,6 +8,6 @@ JOB_ID=$(python dinov2/run/train/train.py \
 #restart the training using the checkpoint at the 150th epochs
 JOB_ID=$(python dinov2/run/train/train.py \
     --nodes 1 \
-    --config-file dinov2/configs/ssl_resume_150_config_size112-224_clean-gp.yaml \
+    --config-file dinov2/configs/ssl_resume_150_miniIN.yaml \
     --output-dir restart \
     train.dataset_path=ImageNet:split=TRAIN:root=mini-imagenet:extra=mini-imagenet-extra)
