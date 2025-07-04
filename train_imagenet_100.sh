@@ -9,5 +9,5 @@ JOB_ID=$(python dinov2/run/train/train.py \
 JOB_ID=$(python dinov2/run/train/train.py \
     --nodes 1 \
     --config-file dinov2/configs/ssl_resume_150_miniIN.yaml \
-    --output-dir restart \
+    --output-dir restart_100\
     train.dataset_path=ImageNet:split=TRAIN:root=mini-imagenet:extra=mini-imagenet-extra)
