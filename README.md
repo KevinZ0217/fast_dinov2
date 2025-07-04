@@ -3,7 +3,7 @@
 ## Environmental setup
 Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all required packages and environments.
 
-###Dataset download
+### Dataset download
 1Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
 
 
