@@ -1,3 +1,11 @@
+## Environmental setup
+Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all required packages and environments.
+
+
+
+
+
+
 1. In train.sh, change --config-file to dinov2/configs/ssl_112_config.yaml --output-dir path to your own output folder(e.g. /users/username/scratch/robust_dinov2_output/ssl_112_output), "root" path and "extra" path in train.dataset_path=Imagenet to your own dataset path.
 2 - training: sbatch train.sh. Check the current directory, a (slurm-"jobid".out) file will be generated. You can go to your output folder to monitor the training process and eta for training to finish. The log file is in (robust_dinov2_output/ssl_112_output/logs/log.txt), if any exception and error are triggered then go to (robust_dinov2_output/"job-id"_0_log.err) to check what error it is.
 3 - linear probing: Training will be finished in around 4 hours. Set up linear_probe.sh. If your output folder is (/users/username/scratch/robust_dinov2_output/ssl_112_output), for example, Open linear_probe.sh, 
