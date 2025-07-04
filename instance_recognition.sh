@@ -1,1 +1,8 @@
-PYTHONPATH="/users/jzhan708/data/kevin/robust_dinov2" python dinov2/eval/instance_recog.py --data_root=/users/jzhan708/data/kevin/robust_dinov2/revisitop/data/ --test_dataset=rparis6k --config-file=/users/jzhan708/data/kevin/robust_dinov2_output/ssl_resume_150_size112-224_clean-gp_output/config.yaml --pretrained-weights=/users/jzhan708/data/kevin/robust_dinov2_output/ssl_resume_150_size112-224_clean-gp_output/eval/training_62499/teacher_checkpoint.pth --noise=identity_0 --log_file=ic_result_112_paris.txt
+python dinov2/eval/instance_recog.py 
+        --data_root=revisitop/data/ 
+        #--test_dataset=roxford5k
+        --test_dataset=rparis6k 
+        --config-file=pretraining_output/config.yaml 
+        --pretrained-weights=pretraining_output/eval/training_step/teacher_checkpoint.pth 
+        --noise=identity_0 
+        --log_file=log.txt
