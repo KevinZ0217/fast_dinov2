@@ -8,13 +8,13 @@ corruptions=(
 )
 levels=(1 2 3 4 5) 
 steps=(12499)  # put your checkpoint steps here
-output="your_output_folder"
+output="your_output_folder_for_1k"
 
 for step in "${steps[@]}"; do
 	for corruption in "${corruptions[@]}"; do
 	    for level in "${levels[@]}"; do
 	        echo "Running eval_main.sh $corruption $level $step $output"
-	        sh eval_main.sh $corruption $level $step $output
+	        sh eval_main_1k.sh $corruption $level $step $output
 	    done
 	done
 done
