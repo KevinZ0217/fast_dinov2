@@ -36,15 +36,15 @@ imagenet/
 2. Train DINOv2 with ```sh train_imagenet_100.sh```, ```sh train_imagenet_1k.sh```.
 3. Change the path of output folder to the one from step 2, and run linear probing on the model checkpoint with ```sh linear_probe_submit_100.sh```, ```sh linear_probe_submit_1k.sh```.
 4. Evaluate on mini-imagenet-C and imagenet-C. Make sure the folder structures are as follows:
-```
-shell
-imagenet-c/
-├── corruption_type/
-    ├── Corruption_level/
-         ├── labels.txt
-         ├── val/
-              ├── n01532829/
-              └── ...
-```
-Change the output folder path in ```linear_probe_submit_1K.sh``` and ```linear_probe_submit_100.sh```. With the trained linear classifier in step 3, run ```sh linear_probe_submit_1K.sh``` and ```linear_probe_submit_100.sh```.
+    ```shell
+    imagenet-c/
+    ├── corruption_type/
+        ├── Corruption_level/
+             ├── labels.txt
+             ├── val/
+                  ├── n01532829/
+                  └── ...
+    ```
+    Change the output folder path in ```linear_probe_submit_1K.sh``` and ```linear_probe_submit_100.sh```. With the trained linear classifier in step 3, run ```sh linear_probe_submit_1K.sh``` and ```linear_probe_submit_100.sh```.
 5. Instance recognition: change the path for teacher checkpoint, config, and dataset in instance_recognition.sh. Run ```sh instance_recognition.sh```
+
