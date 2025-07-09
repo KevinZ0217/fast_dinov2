@@ -15,17 +15,17 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
 1. Download [Imagenet-100](https://drive.google.com/file/d/1BpNAjPypv5l9U0Wu9x3_IgN09_vf9A9O/view?usp=sharing), which includes 50000 training and 5000 validation images.
 
 2. Download the Imagenet-1k dataset with the following directory structure:
-```shell
-imagenet/
-├── train/
-│   ├── n01440764/
-│   ├── n01443537/
-│   └── ...
-└── val/
-    ├── n01440764/
-    ├── n01443537/
-    └── ...
-```
+    ```shell
+    imagenet/
+    ├── train/
+    │   ├── n01440764/
+    │   ├── n01443537/
+    │   └── ...
+    └── val/
+        ├── n01440764/
+        ├── n01443537/
+        └── ...
+    ```
 3. Download the mini-imagenet-C from [here](https://drive.google.com/file/d/1V2SxC_eF6C5eai1is4aM33C4erJUg6Gi/view?usp=sharing).
 4. Metadata generation: in ``` process_metadata.py```, replace ```root``` with the path to the mini-imagenet and imagenet. Run ```python process_metadata.py```.
 5. For the Oxford and Paris instance recognition experiment, download from this [repo](https://github.com/filipradenovic/revisitop).
