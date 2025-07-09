@@ -34,7 +34,7 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
 ### Imagnet-100 and Imagenet-1K Experiments:
 1. Modify the path for mini-imagenet, mini-imagenet-extra and imagenet, imagenet-extra in train_imagenet_100.sh, train_imagenet_1k.sh.
 2. Train DINOv2 with ```sh train_imagenet_100.sh```, ```sh train_imagenet_1k.sh```.
-3. Change the path of output folder to the one from step 2, and run linear probing on the model checkpoint with ```sh linear_probe_submit_100.sh```, ```sh linear_probe_submit_1k.sh```.
+3. Change the path of output folder to the one from step 2, and run linear probing on the model checkpoint with ```sh linear_probe_submit_imagenet_100.sh```, ```sh linear_probe_submit_imagenet_1k.sh```.
 4. Evaluate on mini-imagenet-C and imagenet-C. Make sure the folder structures are as follows:
     ```shell
     imagenet-c/
