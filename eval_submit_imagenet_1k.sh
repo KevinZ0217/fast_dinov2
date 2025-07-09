@@ -14,7 +14,7 @@ for step in "${steps[@]}"; do
 	for corruption in "${corruptions[@]}"; do
 	    for level in "${levels[@]}"; do
 	        echo "Running eval_main.sh $corruption $level $step $output"
-	        sh eval_main_1k.sh $corruption $level $step $output
+	        sh eval_main_imagenet_1k.sh $corruption $level $step $output
 	    done
 	done
 done
