@@ -45,6 +45,6 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
                   ├── n01532829/
                   └── ...
     ```
-    Change the output folder path in ```linear_probe_submit_1K.sh``` and ```linear_probe_submit_100.sh```. With the trained linear classifier in step 3, run ```sh linear_probe_submit_1K.sh``` and ```linear_probe_submit_100.sh```.
+    Change the output folder path in ```eval_main_imagenet_100.sh``` and ```eval_main_imagenet_1k.sh```. With the trained linear classifier in step 3, run ```sh eval_submit_imagenet_1k.sh``` and ```eval_submit_imagenet_100.sh```.
 5. Instance recognition: change the path for teacher checkpoint, config, and dataset in instance_recognition.sh. Run ```sh instance_recognition.sh```
 
