@@ -1,6 +1,5 @@
 MODEL:
-  WEIGHTS: '/users/jzhan708/data/kevin/robust_dinov2_output/ssl_200_size112_output/model_0187499.rank_0.pth'
-  # WEIGHTS: ''
+  WEIGHTS: ''#<your model checkpoint from specific training steps, for example "fastdinov2_output/model_0187499.rank_0.pth">
 compute_precision:
   grad_scaler: true
   teacher:
