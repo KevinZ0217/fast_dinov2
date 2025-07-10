@@ -48,3 +48,4 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
     Change the output folder path in ```eval_main_imagenet_100.sh``` and ```eval_main_imagenet_1k.sh```. With the trained linear classifier in step 3, run ```sh eval_submit_imagenet_1k.sh``` and ```eval_submit_imagenet_100.sh```.
 5. Instance recognition: change the path for teacher checkpoint, config, and dataset in instance_recognition.sh. Run ```sh instance_recognition.sh```
 
+**Note**: This repository is still being updated. If you run into any problem replicating or running the experiments, feel free to file an issue!
