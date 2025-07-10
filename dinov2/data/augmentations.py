@@ -198,15 +198,6 @@ class DataAugmentationDINO(object):
         self.gb = gaussian_blurring
         self.AA = AA
         self.less_aug = less_aug
-        # patch_size_options = [20, 30, 50, 100, 150] 
-        # max_scale_options = [0.1, 0.2, 0.3, 0.5, 0.8, 1.0]
-
-        # selected_patch_size = random.choice(patch_size_options)  #
-        # selected_max_scale = random.choice(max_scale_options)
-        #self.gaussian_patching = AddPatchGaussian(patch_size=-1, max_scale=0.5,
-        #                    randomize_patch_size=True,
-        #                    randomize_scale=True)
-
 
         logger.info("###################################")
         logger.info("Using data augmentation parameters:")
@@ -293,10 +284,6 @@ class DataAugmentationDINO(object):
         self.global_transfo2 = transforms.Compose([color_jittering, global_transfo2_extra, self.normalize])
         self.local_transfo = transforms.Compose([color_jittering, local_transfo_extra, self.normalize])
         
-        #self.global_transfo1 = transforms.Compose([color_jittering, self.normalize])
-        #self.global_transfo2 = transforms.Compose([color_jittering, self.normalize])
-        #self.local_transfo = transforms.Compose([color_jittering, self.normalize])    
-    
         self.global_transfo1_less_aug = transforms.Compose([self.normalize])
         self.global_transfo2_less_aug = transforms.Compose([self.normalize])
         self.local_transfo_less_aug = transforms.Compose([self.normalize])       
@@ -336,9 +323,6 @@ class DataAugmentationDINO(object):
              im1_base = self.geometric_augmentation_global(image)
              im2_base = self.geometric_augmentation_global(image) 
         
-        #if self.gp is True:
-        #    im1_base = self.gaussian_patching(im1_base)
-        #    im2_base = self.gaussian_patching(im2_base)        
 
         if self.less_aug is True:
             global_crop_1 = self.global_transfo1_less_aug(im1_base)
