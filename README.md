@@ -32,6 +32,25 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
 
 
 ### Imagnet-100 and Imagenet-1K Experiments:
+#### in ```dinov2/data/datasets/image_net.py```, use the corresponding ```split_lengths``` for imagenet-100 or imagenet-1k
+```shell
+    @property
+    def length(self) -> int:
+        # for imagenet-100
+        #split_lengths = {
+        #    _Split.TRAIN: 50000,
+        #    _Split.VAL: 50_00,
+        #    #50_00
+        #    _Split.TEST: 100_00,
+        #}
+        # for imagenet-1k
+        split_lengths = {
+            _Split.TRAIN: 1_281_167,
+            _Split.VAL: 50_000,
+            _Split.TEST: 100_000,
+        }
+        return split_lengths[self]
+```
 1. Modify the path for mini-imagenet, mini-imagenet-extra and imagenet, imagenet-extra in train_imagenet_100.sh, train_imagenet_1k.sh.
 2. Train DINOv2 with ```sh train_imagenet_100.sh```, ```sh train_imagenet_1k.sh```.
 3. Change the path of output folder to the one from step 2, and run linear probing on the model checkpoint with ```sh linear_probe_submit_imagenet_100.sh```, ```sh linear_probe_submit_imagenet_1k.sh```.
