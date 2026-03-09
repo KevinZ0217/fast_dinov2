@@ -67,4 +67,15 @@ Please follow [DINOv2](https://github.com/facebookresearch/dinov2) for all requi
     Change the output folder path in ```eval_main_imagenet_100.sh``` and ```eval_main_imagenet_1k.sh```. With the trained linear classifier in step 3, run ```sh eval_submit_imagenet_1k.sh``` and ```eval_submit_imagenet_100.sh```.
 5. Instance recognition: change the path for teacher checkpoint, config, and dataset in instance_recognition.sh. Run ```sh instance_recognition.sh```
 
+### Citation
+If you find this repository helpful, please consider giving this repo a star ⭐ and citing:
+```shell
+@misc{zhang2025fastdinov2,
+      title={FastDINOv2: Frequency Based Curriculum Learning Improves Robustness and Training Speed
+}, 
+      author={Jiaqi Zhang and Juntuo Wang and Zhixin Sun and John Zou and Randall Balestriero},
+      journal={arXiv preprint arXiv:2507.03779v3}
+      year={2025},
+}
+
 **Note**: This repository is still being updated. If you run into any problem replicating or running the experiments, feel free to file an issue!
